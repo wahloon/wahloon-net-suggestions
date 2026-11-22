@@ -1,0 +1,31 @@
+name: Suggest a guide
+description: Propose a practical guide for running models locally.
+title: "[Guide] "
+labels: ["guide suggestion"]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Proposed title or topic
+      placeholder: Running a 27B abliterated model on a 16 GB card
+    validations:
+      required: true
+  - type: textarea
+    id: outline
+    attributes:
+      label: What should it cover?
+      description: A short outline. Mention the hardware, software and model families involved.
+    validations:
+      required: true
+  - type: input
+    id: experience
+    attributes:
+      label: Have you tried it?
+      description: Optional. Link a gist, post or repository if you have working notes.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it would help
+      description: Who is the guide for, and what problem does it solve?
+    validations:
+      required: true

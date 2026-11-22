@@ -1,0 +1,56 @@
+name: Suggest a model
+description: Propose an abliterated or uncensored open-weight model for the catalog.
+title: "[Model] "
+labels: ["model suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Please link the original Hugging Face repository and keep claims verifiable.
+  - type: input
+    id: name
+    attributes:
+      label: Model name
+      placeholder: huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF
+    validations:
+      required: true
+  - type: input
+    id: hf
+    attributes:
+      label: Hugging Face URL
+      placeholder: https://huggingface.co/...
+    validations:
+      required: true
+  - type: input
+    id: base
+    attributes:
+      label: Base model
+      placeholder: Qwen/Qwen3.8-27B
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: Method
+      options:
+        - abliteration
+        - heretic
+        - heretic-ara
+        - fine-tune
+        - other / not sure
+    validations:
+      required: true
+  - type: input
+    id: size
+    attributes:
+      label: Size and approximate VRAM at Q4
+      placeholder: 27B, ~16–18 GB
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Why it belongs in the catalog
+      description: One or two factual sentences. Note the license and any known issues.
+    validations:
+      required: true

@@ -1,0 +1,31 @@
+name: Report a correction
+description: Flag a stale number, wrong license, broken link or typo on the site.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      placeholder: https://www.wahloon.net/models/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Quote the current text or value and explain the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Include a source if the change is factual.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Optional. Hugging Face model card, license page, release note or other reference.
